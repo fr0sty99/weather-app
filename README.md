@@ -26,3 +26,6 @@ Due to limitations of the API the data for humidity, pressure, sun times and for
 
 
 
+Design Inspiration for Future Styling:
+
+![alt text](https://github.com/fr0sty99/weather-app/blob/main]/image.png?raw=true)
