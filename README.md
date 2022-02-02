@@ -31,5 +31,6 @@ Design Inspiration for Future Styling:
 ![img](https://github.com/fr0sty99/weather-app/blob/main/image.png)
 
 Current "Design":
+
 ![img](https://github.com/fr0sty99/weather-app/blob/main/image2.png)
 ![img](https://github.com/fr0sty99/weather-app/blob/main/image3.png)
