@@ -1,0 +1,114 @@
+
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin-bottom: 1rem;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img-top {
+    object-fit: contain;
+    max-width: 3rem;
+    max-height: 3rem;
+  }
+
+  div.container-fluid {
+    background: steelblue;
+    display: grid;
+    height: 150vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.1fr 1.5fr 0.1fr 1.5fr 1.5fr;
+    grid-template-areas: 
+    "title title title title"
+    "simpleweather simpleweather simpleweather simpleweather"
+    "sub sub sub sub"
+    "card1 card2 card3 card4"
+    "card5 card6 card7 card8"
+    "sub2 sub2 sub2 sub2"
+    "graph graph graph graph";
+    grid-gap: 0.2rem
+  }
+
+  ul {
+    list-style: outside none none;
+}
+
+  .card {
+    min-width: fit-content;
+  }
+
+  #title {
+    grid-area: title;
+    background: yellow;
+  }
+
+  #sub {
+    grid-area: sub;
+    background: yellow;
+  }
+
+  #simpleweather {
+    display:flex;
+    grid-area: simpleweather;
+    background: yellow;
+    min-width: fit-content;
+  }
+
+  
+
+  #card1 {
+    grid-area: card1;
+    background: yellow;
+  }
+
+  #card2 {
+    grid-area: card2;
+    background: yellow;
+  }
+
+  #card3 {
+    grid-area: card3;
+    background: yellow;
+  }
+
+  #card4 {
+    grid-area: card4;
+    background: yellow;
+  }
+
+  #card5 {
+    grid-area: card5;
+    background: yellow;
+  }
+
+  #card6 {
+    grid-area: card6;
+    background: yellow;
+  }
+
+  #card7 {
+    grid-area: card7;
+    background: yellow;
+  }
+
+  #card8 {
+    grid-area: card8;
+    background: yellow;
+  }
+ 
+#currentWeather {
+  min-width: fit-content;
+  height: 100%;
+}
+
+#details {
+  grid-area: details;
+  background: yellow;
+  min-width: fit-content;
+  height: 100%;
+
+}
