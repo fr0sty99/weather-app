@@ -6,7 +6,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 const client = new ApolloClient(
   {
     cache: new InMemoryCache(),
-    uri: "https://graphql-weather-api.herokuapp.com/"
+    uri: "http://localhost:4000/"
   });
 
 ReactDOM.render(
@@ -19,3 +19,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+// uri: "https://graphql-weather-api.herokuapp.com/"

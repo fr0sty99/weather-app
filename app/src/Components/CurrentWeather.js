@@ -33,6 +33,7 @@ export function SimpleWeatherCard(props) {
 
 export function DetailWeatherCard(props) {
     if (props.data) {
+
         const obj = props.data.getCityByName.weather;
         var className = props.detailActive ? 'visible' : 'hidden';
         return (
