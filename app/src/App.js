@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { SimpleWeatherCard, DetailWeatherCard } from './Components/CurrentWeather';
-import { GET_CURRENT_WEATHER } from './GraphQL/Queries';
+import { GET_FULL_WEATHER_DATA } from './GraphQL/Queries';
 import './App.css';
 import Graph from './Components/Graph';
 
@@ -18,8 +18,9 @@ const override = css`
 
 function App() {
   const [detailActive, setDetailActive] = useState(false);
-  const { error, loading, data } = useQuery(GET_CURRENT_WEATHER);
+  const { error, loading, data } = useQuery(GET_FULL_WEATHER_DATA);
 
+  console.log(data);
   if (loading) {
     return <div style={{ height: '100vh' }}><BarLoader css={override} color={"#123abc"} width={'50%'} height={20} loading={true} speedMultiplier={1.5} /></div>;
   }
@@ -32,7 +33,7 @@ function App() {
       <>
         <div className='container-fluid' >
           <div id='title'>Wetter in Basel</div>
-          <SimpleWeatherCard data={data} error={error} onClick={() => { setDetailActive(!detailActive) }} />
+          <SimpleWeatherCard data={data.getWeatherByCoord} error={error} onClick={() => { setDetailActive(!detailActive) }} />
           <DetailWeatherCard data={data} detailActive={detailActive} />
           <div id='sub'>7 Tage Wetter in Basel</div>
           <div id='card1'>Tomorrow</div>

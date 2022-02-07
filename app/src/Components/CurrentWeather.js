@@ -4,10 +4,9 @@ import { Button, Card } from 'react-bootstrap';
 
 export function SimpleWeatherCard(props) {
     if (props.data) {
-        const obj = props.data.getCityByName.weather;
-
-        if (obj) {
-            var iconCode = obj.summary.icon;
+        const current = props.data;
+        if (current) {
+            var iconCode = current.summary.icon;
             var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
 
             return (
@@ -18,10 +17,10 @@ export function SimpleWeatherCard(props) {
                             alt='Icon'
                         />
                         <ul>
-                            <li>{obj.summary.description}</li>
-                            <li>Temperatur: {obj.temperature.actual} °C</li>
-                            <li>Tagestief: {obj.temperature.min} °C</li>
-                            <li>Tageshoch: {obj.temperature.max} °C</li>
+                            <li>{current.summary.description}</li>
+                            <li>Temperatur: {current.temperature.actual} °C</li>
+                            <li>Tagestief: {current.temperature.min} °C</li>
+                            <li>Tageshoch: {current.temperature.max} °C</li>
                         </ul>
                         <Button onClick={() => props.onClick()}>More Info</Button>
                     </Card.Body >

@@ -20,4 +20,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// uri: "https://graphql-weather-api.herokuapp.com/"
+//  "https://graphql-weather-api.herokuapp.com/"
+//  "http://localhost:4000/"
