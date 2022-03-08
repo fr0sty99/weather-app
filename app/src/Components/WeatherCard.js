@@ -2,11 +2,11 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button, Card } from 'react-bootstrap';
 
-export function SimpleWeatherCard(props) {
+export function WeatherCard(props) {
     if (props.data) {
         const current = props.data;
-        if (current) {
-            var iconCode = current.summary.icon;
+        if (false) {
+            var iconCode = current.weather.icon;
             var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
 
             return (
@@ -28,10 +28,11 @@ export function SimpleWeatherCard(props) {
             );
         }
     }
+    return <></>
 };
 
 export function DetailWeatherCard(props) {
-    if (props.data) {
+    if (false) {
 
         const obj = props.data.getCityByName.weather;
         var className = props.detailActive ? 'visible' : 'hidden';
@@ -50,4 +51,6 @@ export function DetailWeatherCard(props) {
             </Card>
         )
     }
+
+    return <></>
 };
